@@ -35,16 +35,24 @@
                   ]
                 },
                 "firstname": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 2,
+				"maximum": 32
                 },
                 "surname": {
-                  "type": "string"
+                  "type": "string",
+				    "minimum": 2,
+				"maximum": 32
                 },
                 "sex": {
-                  "type": "string"
+                  "type": "string",
+				    "minimum": 1,
+				"maximum": 1
                 },
                 "pregnantBreastfeadingStatus": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 1,
+				"maximum": 5
                 },
                 "age": {
                   "type": "integer"
@@ -53,16 +61,24 @@
                   "type": "string"
                 },
                 "facilityID": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 11,
+				"maximum": 20
                 },
                 "labID": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 11,
+				"maximum": 20
                 },
                 "sampleID": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 11,
+				"maximum": 20
                 },
                 "sampleType": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 1,
+				"maximum": 3
                 },
                 "indicationVLTest": {
                   "type": "integer"
@@ -154,32 +170,46 @@
                     }
                   ]
                 },
-                "firstname": {
-                  "type": "string"
+                 "firstname": {
+                  "type": "string",
+				  "minimum": 2,
+				"maximum": 32
                 },
                 "surname": {
-                  "type": "string"
+                  "type": "string",
+				    "minimum": 2,
+				"maximum": 32
                 },
                 "sex": {
-                  "type": "string"
+                  "type": "string",
+				    "minimum": 1,
+				"maximum": 1
                 },
                 "age": {
                   "type": "integer"
                 },
                 "dob": {
-                  "type": "date"
+                  "type": "string"
                 },
                 "facilityID": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 11,
+				"maximum": 20
                 },
                 "labID": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 11,
+				"maximum": 20
                 },
                 "sampleID": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 11,
+				"maximum": 20
                 },
                 "sampleType": {
-                  "type": "string"
+                  "type": "string",
+				  "minimum": 1,
+				"maximum": 3
                 },
                 "indicationVLTest": {
                   "type": "string"
