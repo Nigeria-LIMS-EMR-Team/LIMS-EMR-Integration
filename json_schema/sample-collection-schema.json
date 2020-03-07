@@ -99,13 +99,13 @@
                   "type": "string"
                 },
                 "sampleCollectionDate": {
-                  "type": "date"
+                  "type": "string"
                 },
                 "sampleCollectionTime": {
-                  "type": "date-time"
+                  "type": "string"
                 },
                 "dateSampleSent": {
-                  "type": "date"
+                  "type": "string"
                 }
               },
               "required": [
@@ -224,19 +224,19 @@
                   "type": "string"
                 },
                 "sampleOrderDate": {
-                  "type": "date"
+                  "type": "string"
                 },
                 "sampleCollectedBy": {
                   "type": "string"
                 },
                 "sampleCollectionDate": {
-                  "type": "date"
+                  "type": "string"
                 },
                 "sampleCollectionTime": {
-                  "type": "date-time"
+                  "type": "string"
                 },
                 "dateSampleSent": {
-                  "type": "date"
+                  "type": "string"
                 },
                 "reasonForEID": {
                   "type": "string"
