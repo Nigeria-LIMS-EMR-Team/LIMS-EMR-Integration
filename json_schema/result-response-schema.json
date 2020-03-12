@@ -5,8 +5,10 @@
     "description": "The root schema comprises the entire JSON document.",
     "required": [
         "manifestID",
-        "receivingPCRLab",
-        "viralLoadTestReport"
+        "receivingFacilityID",
+        "sendingPCRLab",
+        "testType",
+        "testReport"
     ],
     "properties": {
         "manifestID": {
@@ -15,13 +17,25 @@
             "maxLength": 10,
             "description": "The manifest ID of the returned result"
         },
-        "receivingPCRLab": {
+        "receivingFacilityID": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 20
+        },
+        "sendingPCRLab": {
             "type": "string",
             "minLength": 10,
             "maxLength": 30,
             "description": "The identifier (e.g LIMS ID) of the PCR lab returning these results"
         },
-        "viralLoadTestReport": {
+        "testType": {
+            "type":"integer",
+            "description": "The type of test result(s) being returned",
+            "minimum": 1,
+            "maximum": 2,
+            "enum": [1, 2]
+        },
+        "testReport": {
             "type": "array",
             "minItems": 1,
             "description": "The object containing a list of results, each item a result for a samples in that batch",
@@ -30,7 +44,8 @@
                 "title": "",
                 "description": "",
                 "required": [
-                    "laboratoryRegistrationNumber",
+                    "patientID",
+                    "sampleID",
                     "pcrLabSampleNumber",
                     "visitDate",
                     "dateSampleReceivedAtPCRLab",
@@ -43,13 +58,43 @@
                     "sampleTestable"
                 ],
                 "properties": {
-                    "laboratoryRegistrationNumber": {
+                    "patientID": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": [
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "idNumber": {
+                                        "type": "string",
+                                        "minLength": 10,
+                                        "maxLength": 10
+                                    },
+                                    "idTypeCode": {
+                                        "type": "string",
+                                        "minLength": 6,
+                                        "maxLength": 15,
+                                        "enum": [
+                                            "HOSPITALNO",
+                                            "RECENCY",
+                                            "CLIENTID"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "idNumber",
+                                    "idTypeCode"
+                                ]
+                            }
+                        ]
+                    },
+                    "sampleID": {
                         "type": "string",
                         "minLength": 10,
                         "maxLength": 20,
                         "description": "The registration number of the sample i.e Sample ID"
                     },
-                    
                     "pcrLabSampleNumber": {
                         "type": "string",
                         "minLength": 10,
@@ -67,11 +112,8 @@
                         "format": "date"
                     },
                     "testResult": {
-                        "type": "integer",
-                        "description": "Actual Test Result, specifying the VL suppression status",
-                        "minimum": 1,
-                        "maximum": 4,
-                        "enum": [1,2,3,4]
+                        "type": "string",
+                        "description": "Actual Test Result, specifying the VL detection value from the PCR machine"
                     },
                     "resultDate": {
                         "type": "string",
@@ -98,8 +140,13 @@
                         "description": "A status code specifying the state of the sample",
                         "minimum": 1,
                         "maximum": 4,
-                        "default":3,
-                        "enum": [1,2,3,4]
+                        "default": 3,
+                        "enum": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
                     },
                     "sampleTestable": {
                         "type": "boolean",
