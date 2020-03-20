@@ -8,7 +8,7 @@
         "receivingFacilityID",
         "sendingPCRLab",
         "testType",
-        "testReport"
+        "viralLoadTestReport"
     ],
     "properties": {
         "manifestID": {
@@ -35,7 +35,7 @@
             "maximum": 2,
             "enum": [1, 2]
         },
-        "testReport": {
+        "viralLoadTestReport": {
             "type": "array",
             "minItems": 1,
             "description": "The object containing a list of results, each item a result for a samples in that batch",
