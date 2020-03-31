@@ -1,0 +1,27 @@
+{
+    "manifestID": "111111111!",
+    "receivingFacilityID": "1111111!11",
+    "sendingPCRLab": "111111111111",
+    "testType": 2,
+    "testReport": [
+        {
+            "patientID": [
+                {
+                    "idNumber": "aaaaaaaaaa",
+                    "idTypeCode": "RECENCY"
+                }
+            ],
+            "sampleID": "1111111111111",
+            "pcrLabSampleNumber": "11111111111",
+            "visitDate": "2019-09-09",
+            "dateSampleReceivedAtPCRLab": "2019-09-09",
+            "testResult": "You've got it bad mate",
+            "resultDate": "2019-09-09",
+            "assayDate": "2019-09-09",
+            "approvalDate": "2019-12-12",
+            "dateResultDispatched": "2019-09-09",
+            "sampleStatus": 1,
+            "sampleTestable": true
+        }
+    ]
+}
