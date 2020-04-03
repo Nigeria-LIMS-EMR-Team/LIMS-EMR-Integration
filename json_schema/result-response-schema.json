@@ -6,7 +6,9 @@
     "required": [
         "manifestID",
         "receivingFacilityID",
-        "sendingPCRLab",
+        "receivingFacilityName",
+        "sendingPCRLabID",
+        "sendingPCRLabName",
         "testType",
         "viralLoadTestReport"
     ],
@@ -22,18 +24,31 @@
             "minLength": 10,
             "maxLength": 20
         },
-        "sendingPCRLab": {
+        "receivingFacilityName": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 30
+        },
+        "sendingPCRLabID": {
             "type": "string",
             "minLength": 10,
             "maxLength": 30,
             "description": "The identifier (e.g LIMS ID) of the PCR lab returning these results"
         },
+        "sendingPCRLabName": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 30
+        },
         "testType": {
-            "type":"integer",
+            "type": "integer",
             "description": "The type of test result(s) being returned",
             "minimum": 1,
             "maximum": 2,
-            "enum": [1, 2]
+            "enum": [
+                1,
+                2
+            ]
         },
         "viralLoadTestReport": {
             "type": "array",
@@ -45,6 +60,10 @@
                 "description": "",
                 "required": [
                     "patientID",
+                    "firstName",
+                    "surName",
+                    "sex",
+                    "dateOfBirth",
                     "sampleID",
                     "pcrLabSampleNumber",
                     "visitDate",
@@ -88,6 +107,31 @@
                                 ]
                             }
                         ]
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 32
+                    },
+                    "surName": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 32
+                    },
+                    "sex": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1,
+                        "enum": [
+                            "F",
+                            "M",
+                            "N",
+                            "U"
+                        ]
+                    },
+                    "dateOfBirth": {
+                        "type": "string",
+                        "format": "date"
                     },
                     "sampleID": {
                         "type": "string",

@@ -1,5 +1,8 @@
 {
-"manifestID":"1234567890",
-"facilityID":"1234567890",
-"testType":"EID"
+    "sendingFacilityID": "1234567890",
+    "sendingFacilityName": "Stark Industries",
+    "receivingPCRLabID": "1927189183",
+    "receivingPCRLabName": "Umbrella Corporation",
+    "testType": "EID",
+    "manifestID": "1234567890"
 }

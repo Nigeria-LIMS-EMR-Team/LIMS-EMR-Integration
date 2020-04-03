@@ -5,12 +5,30 @@
   "type": "object",
   "description": "The schema describing EMR requests for results. Definitions for facilityID, testType and manifestID should be based on those from sample collection schema and the data dictionary.",
   "properties": {
-  "facilityID": {
+  "sendingFacilityID": {
       "type": "string",
-      "description": "Facility Unique Identifier",
+      "description": "Unique Identifier of Facility from which the sample was sent",
 	    "minLength": 10,
 	    "maxLength": 20
     },
+  "sendingFacilityName": {
+    "type":"string",
+    "description": "Name of the Facility from which the sample was sent",
+    "minLength":5,
+    "maxLength": 30
+  },
+  "receivingPCRLabID": {
+    "type":"string",
+    "description": "Unique identifier of PCR lab to which the sample was sent",
+    "minLength":10,
+    "maxLength": 20
+  },
+  "receivingPCRLabName": {
+    "type":"string",
+    "description": "Unique name of the PCR lab to which the sample was sent",
+    "minLength":5,
+    "maxLength": 30
+  },
 	"testType": {
       "type": "string",
       "description": "Type of test whose results are being requested",
@@ -24,5 +42,13 @@
       "minLength": 10,
       "maxLength": 10
     }
-  }
+  },
+  "required": [
+    "sendingFacilityID",
+    "sendingFacilityName",
+    "receivingPCRLabID",
+    "receivingPCRLabName",
+    "testType",
+    "manifestID"
+  ]
 }

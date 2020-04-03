@@ -1,7 +1,9 @@
 {
     "manifestID": "111111111!",
     "receivingFacilityID": "1111111!11",
-    "sendingPCRLab": "111111111111",
+    "receivingFacilityName": "DC Comics",
+    "sendingPCRLabID": "111111111111",
+    "sendingPCRLabName": "Marvel Comics",
     "testType": 2,
     "eidTestReport": [
         {
@@ -12,6 +14,10 @@
                 }
             ],
             "sampleID": "1111111111111",
+            "firstName": "Baby",
+            "surName": "Thanos",
+            "sex": "M",
+            "dateOfBirth": "2019-12-31",
             "pcrLabSampleNumber": "11111111111",
             "visitDate": "2019-09-09",
             "dateSampleReceivedAtPCRLab": "2019-09-09",

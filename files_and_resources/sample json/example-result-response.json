@@ -1,9 +1,11 @@
 {
     "manifestID": "111111111!",
     "receivingFacilityID": "1111111!11",
-    "sendingPCRLab": "111111111111",
+    "receivingFacilityName": "Atlas Corporation",
+    "sendingPCRLabID": "111111111111",
+    "sendingPCRLabName": "Trask Industries",
     "testType": 2,
-    "testReport": [
+    "viralLoadTestReport": [
         {
             "patientID": [
                 {
@@ -11,6 +13,10 @@
                     "idTypeCode": "RECENCY"
                 }
             ],
+            "firstName": "Ras",
+            "surName": "Al-ghul",
+            "sex": "M",
+            "dateOfBirth": "1990-12-31",
             "sampleID": "1111111111111",
             "pcrLabSampleNumber": "11111111111",
             "visitDate": "2019-09-09",
