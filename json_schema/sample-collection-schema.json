@@ -31,6 +31,30 @@
           "minLength":10,
           "maxLength": 30
         },
+        "dateScheduledForPickup": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "temperatureAtPickup":{
+          "type":"number",
+          "minimum": -20,
+          "maximum": 100
+        },
+        "samplePackagedBy":{
+          "type":"string",
+          "minLength":10,
+          "maxLength": 30
+        },
+        "courierRiderName":{
+          "type":"string",
+          "minLength":10,
+          "maxLength": 30
+        },
+        "courierContact":{
+          "type":"string",
+          "minLength":10,
+          "maxLength": 30
+        },
         "sampleInformation": {
           "type": "array",
           "items": [
@@ -176,7 +200,10 @@
         "sendingFacilityName",
         "receivingLabID",
         "receivingLabName",
-        "sampleInformation"
+        "sampleInformation",
+        "samplePackagedBy",
+        "courierRiderName",
+        "courierContact"
       ]
     },
 
@@ -207,6 +234,30 @@
           "type": "string",
           "minLength":10,
           "maxLength":10
+        },
+        "dateScheduledForPickup": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "temperatureAtPickup":{
+          "type":"number",
+          "minimum": -20,
+          "maximum": 100
+        },
+        "samplePackagedBy":{
+          "type":"string",
+          "minLength":10,
+          "maxLength": 30
+        },
+        "courierRiderName":{
+          "type":"string",
+          "minLength":10,
+          "maxLength": 30
+        },
+        "courierContact":{
+          "type":"string",
+          "minLength":10,
+          "maxLength": 30
         },
         "sampleInformation": {
           "type": "array",
@@ -395,7 +446,10 @@
         "sendingFacilityName",
         "receivingLabID",
         "receivingLabName",
-        "sampleInformation"
+        "sampleInformation",
+        "samplePackagedBy",
+        "courierRiderName",
+        "courierContact" 
       ]
     }
   },
