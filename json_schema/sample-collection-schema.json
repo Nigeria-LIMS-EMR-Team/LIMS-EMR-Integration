@@ -72,8 +72,8 @@
                       "properties": {
                         "idNumber": {
                           "type": "string",
-                          "minLength":10,
-                          "maxLength":10
+                          "minLength":5,
+                          "maxLength":15
                         },
                         "idTypeCode": {
                           "type": "string",
@@ -129,7 +129,7 @@
                   "type": "string",
 				          "minLength": 2,
                   "maxLength": 3,
-                  "enum": ["DBS","WB"]
+                  "enum": ["DBS","WB","PLASMA"]
                 },
                 "indicationVLTest": {
                   "type": "integer",
@@ -276,8 +276,8 @@
                       "properties": {
                         "idNumber": {
                           "type": "string",
-                          "minLength":10,
-                          "maxLength":10
+                          "minLength":5,
+                          "maxLength":15
                         },
                         "idTypeCode": {
                           "type": "string",
