@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "manifestID": {
+      "type": "string"
+    },
+    "facilityName": {
+      "type": "string"
+    },
+    "facilityId": {
+      "type": "string"
+    },
+    "receivingPCRLab": {
+      "type": "string"
+    },
+    "receivingPCRLabId": {
+      "type": "string"
+    },
+    "totalSamplesProcessed": {
+      "type": "string"
+    },
+    "totalSamplesNotProcess": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "sampleId": {
+              "type": "string"
+            },
+            "reasons": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sampleId",
+            "reasons"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "sampleId": {
+              "type": "string"
+            },
+            "reasons": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sampleId",
+            "reasons"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "manifestID",
+    "facilityName",
+    "facilityId",
+    "receivingPCRLab",
+    "receivingPCRLabId",
+    "totalSamplesProcessed",
+    "totalSamplesNotProcess"
+  ]
+}
