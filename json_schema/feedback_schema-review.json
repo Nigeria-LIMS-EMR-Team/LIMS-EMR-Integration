@@ -40,21 +40,6 @@
             "sampleId",
             "reasons"
           ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "sampleId": {
-              "type": "string"
-            },
-            "reasons": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "sampleId",
-            "reasons"
-          ]
         }
       ]
     }
